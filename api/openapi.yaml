@@ -6,13 +6,15 @@ info:
     \ the platform to provide accommodation services to your consumers through a variety\
     \ of connectivity options and business models. LODGEA provides a flexible and\
     \ open platform for many use cases.\n\nThis API allows you to search for availabilities\
-    \ or locations and get all available information about a specific property.\n\n\
-    # API Endpoint\n\n```\nhttps://api.eu.lodgea.io/v1/\n```\n\nThe API is only accessible\
-    \ via HTTPS, the base URL is <code>https://api.eu.lodgea.io/</code>, and the current\
-    \ version is <code>v1</code> which results in the base URL for all requests: <code>https://api.eu.lodgea.io/v1/</code>.\n\
-    \n# Datacenters\n\nThe API is only accessible via HTTPS and the current version\
-    \ is <code>v1</code>, which results in a URL like: <code>https://api.lodgea.io/v1/</code>,\
-    \ depending on the datacenter.\n\n## EU Datacenter\n\n```\nhttps://api.eu.lodgea.io/v1/\n\
+    \ or locations and get all available information about a specific property. For\
+    \ more information, check out the [official API docs](https://lodgea.redoc.ly/).\n\
+    \n# API Endpoint\n\n```\nhttps://api.eu.lodgea.io/v1/\n```\n\nThe API is only\
+    \ accessible via HTTPS, the base URL is <code>https://api.eu.lodgea.io/</code>,\
+    \ and the current version is <code>v1</code> which results in the base URL for\
+    \ all requests: <code>https://api.eu.lodgea.io/v1/</code>.\n\n# Datacenters\n\n\
+    The API is only accessible via HTTPS and the current version is <code>v1</code>,\
+    \ which results in a URL like: <code>https://api.lodgea.io/v1/</code>, depending\
+    \ on the datacenter.\n\n## EU Datacenter\n\n```\nhttps://api.eu.lodgea.io/v1/\n\
     ```\n\nThis is the default datacenter.\n\n## US Datacenter\n\n```\nhttps://api.us.lodgea.io/v2/\n\
     ```\n\n## German Datacenter\n\n```\nhttps://api.uat.lodgea.io/v2/\n```\n\n# Usage\n\
     \n[curl](http://curl.haxx.se/) is used primarily to send requests to LODGEA in\
@@ -89,44 +91,43 @@ info:
     ,\n  \"latestReturn\": \"2022-09-08\",\n  \"sort\": \"quality\",\n  \"serviceList\"\
     : [\n    242\n  ],\n  \"typeList\": [\n    20\n  ],\n  \"unitTypeList\": [\n \
     \   9\n  ],\n  \"unitAmenityList\": [\n    50\n  ],\n  \"mealPlanList\": [\n \
-    \   19\n  ]\n}'\n```\n\n# Appendix\n\n## Parameters\n\n### currencyCode\n\n| Code\
-    \ | Name |\n| ---- | ---- |\n| 1    | EUR  |\n| 2    | GBP  |\n| 3    | AED  |\n\
-    | 4    | USD  |\n| 5    | INR  |\n| 6    | AUD  |\n| 7    | ARS  |\n| 8    | EGP\
-    \  |\n| 9    | KWD  |\n| 10   | RUB  |\n| 11   | MYR  |\n| 12   | SAR  |\n| 13\
-    \   | AZN  |\n| 14   | FJD  |\n| 15   | MXN  |\n| 16   | SGD  |\n| 17   | BHD\
-    \  |\n| 18   | GEL  |\n| 19   | MDL  |\n| 20   | ZAR  |\n| 21   | BRL  |\n| 22\
-    \   | HKD  |\n| 23   | NAD  |\n| 24   | SEK  |\n| 25   | BGN  |\n| 26   | HUF\
-    \  |\n| 27   | TWD  |\n| 28   | CHF  |\n| 29   | CAD  |\n| 30   | NZD  |\n| 31\
-    \   | THB  |\n| 32   | XOF  |\n| 33   | IDR  |\n| 34   | NOK  |\n| 35   | TRY\
-    \  |\n| 36   | CLP  |\n| 37   | ILS  |\n| 38   | OMR  |\n| 39   | CNY  |\n| 40\
-    \   | JPY  |\n| 41   | PLN  |\n| 42   | COP  |\n| 43   | JOD  |\n| 44   | UAH\
-    \  |\n| 45   | CZK  |\n| 46   | KZT  |\n| 47   | QAR  |\n| 48   | DKK  |\n| 49\
-    \   | KRW  |\n| 50   | RON  |\n\n### locationType\n\n| Type                  \
-    \      | Name                        | Example                             |\n\
-    | --------------------------- | --------------------------- | -----------------------------------\
-    \ |\n| formatted_address           | Formatted Address           | Nordhedig 20\
-    \ 25980 Sylt Deutschland |\n| place_id                    | Place ID         \
-    \           | ChIJVaxqTevetEcRyfs8PGHK6mw         |\n| locality              \
-    \      | Locality                    | Sylt                                |\n\
-    | administrative_area_level_1 | Administrative Area Level 1 | Schleswig-Holstein\
-    \                  |\n| administrative_area_level_3 | Administrative Area Level\
-    \ 3 | Nordfriesland                       |\n| state_code                  | State\
-    \ Code                  | SH                                  |\n| country   \
-    \                  | Country                     | Deutschland               \
-    \          |\n| country_code                | Country Code                | DE\
-    \                                  |\n| postal_code                 | Postal Code\
-    \                 | 25980                               |\n| language        \
-    \            | Language                    | de                              \
-    \    |\n| natural_feature             | Natural Feature             | Sylt   \
-    \                             |\n| establishment               | Establishment\
-    \               | Sylt                                |\n| sublocality       \
-    \          | Sublocality                 | Westerland                        \
-    \  |\n| sublocality_level_1         | Sublocality Level 1         | Westerland\
+    \   19\n  ]\n}'\n```\n\n# Appendix\n\n## currencyCode\n\n| Code | Name |\n| ----\
+    \ | ---- |\n| 1    | EUR  |\n| 2    | GBP  |\n| 3    | AED  |\n| 4    | USD  |\n\
+    | 5    | INR  |\n| 6    | AUD  |\n| 7    | ARS  |\n| 8    | EGP  |\n| 9    | KWD\
+    \  |\n| 10   | RUB  |\n| 11   | MYR  |\n| 12   | SAR  |\n| 13   | AZN  |\n| 14\
+    \   | FJD  |\n| 15   | MXN  |\n| 16   | SGD  |\n| 17   | BHD  |\n| 18   | GEL\
+    \  |\n| 19   | MDL  |\n| 20   | ZAR  |\n| 21   | BRL  |\n| 22   | HKD  |\n| 23\
+    \   | NAD  |\n| 24   | SEK  |\n| 25   | BGN  |\n| 26   | HUF  |\n| 27   | TWD\
+    \  |\n| 28   | CHF  |\n| 29   | CAD  |\n| 30   | NZD  |\n| 31   | THB  |\n| 32\
+    \   | XOF  |\n| 33   | IDR  |\n| 34   | NOK  |\n| 35   | TRY  |\n| 36   | CLP\
+    \  |\n| 37   | ILS  |\n| 38   | OMR  |\n| 39   | CNY  |\n| 40   | JPY  |\n| 41\
+    \   | PLN  |\n| 42   | COP  |\n| 43   | JOD  |\n| 44   | UAH  |\n| 45   | CZK\
+    \  |\n| 46   | KZT  |\n| 47   | QAR  |\n| 48   | DKK  |\n| 49   | KRW  |\n| 50\
+    \   | RON  |\n\n## locationType\n\n| Type                        | Name      \
+    \                  | Example                             |\n| ---------------------------\
+    \ | --------------------------- | ----------------------------------- |\n| formatted_address\
+    \           | Formatted Address           | Nordhedig 20 25980 Sylt Deutschland\
+    \ |\n| place_id                    | Place ID                    | ChIJVaxqTevetEcRyfs8PGHK6mw\
+    \         |\n| locality                    | Locality                    | Sylt\
+    \                                |\n| administrative_area_level_1 | Administrative\
+    \ Area Level 1 | Schleswig-Holstein                  |\n| administrative_area_level_3\
+    \ | Administrative Area Level 3 | Nordfriesland                       |\n| state_code\
+    \                  | State Code                  | SH                        \
+    \          |\n| country                     | Country                     | Deutschland\
+    \                         |\n| country_code                | Country Code    \
+    \            | DE                                  |\n| postal_code          \
+    \       | Postal Code                 | 25980                               |\n\
+    | language                    | Language                    | de             \
+    \                     |\n| natural_feature             | Natural Feature     \
+    \        | Sylt                                |\n| establishment            \
+    \   | Establishment               | Sylt                                |\n| sublocality\
+    \                 | Sublocality                 | Westerland                 \
+    \         |\n| sublocality_level_1         | Sublocality Level 1         | Westerland\
     \                          |\n| streetNumber                | Street Number  \
     \             | 20                                  |\n| route               \
     \        | Route                       | Nordhedig                           |\n\
-    \n### serviceCode\n\n| Code  | Name                                          \
-    \          |\n| ----- | -------------------------------------------------------\
+    \n## serviceCode\n\n| Code  | Name                                           \
+    \         |\n| ----- | -------------------------------------------------------\
     \ |\n| 1     | 24-hour front desk                                      |\n| 2\
     \     | 24-hour room service                                    |\n| 3     | 24-hour\
     \ security                                        |\n| 4     | Adjoining rooms\
@@ -600,7 +601,7 @@ info:
     \                 |\n| 6000  | Lunch                                         \
     \          |\n| 6001  | Dinner                                               \
     \   |\n| 90001 | Renewable energy                                        |\n\n\
-    ### mealPlanCode\n\n| Code  | Name                          |\n| ----- | -----------------------------\
+    ## mealPlanCode\n\n| Code  | Name                          |\n| ----- | -----------------------------\
     \ |\n| 0     | (NONE)                        |\n| 1     | All inclusive      \
     \           |\n| 2     | American                      |\n| 3     | Bed & breakfast\
     \               |\n| 4     | Buffet breakfast              |\n| 5     | Caribbean\
@@ -615,7 +616,7 @@ info:
     \             |\n| 21    | Lunch                         |\n| 22    | Dinner \
     \                       |\n| 23    | Breakfast & lunch             |\n| 24   \
     \ | Lunch & Dinner                |\n| 90001 | 3/4 Plan                      |\n\
-    \n### typeCode\n\n| Code | Name                          |\n| ---- | -----------------------------\
+    \n## typeCode\n\n| Code | Name                          |\n| ---- | -----------------------------\
     \ |\n| 1    | All suite                     |\n| 2    | All-Inclusive resort \
     \         |\n| 3    | Apartment                     |\n| 4    | Bed and breakfast\
     \             |\n| 5    | Cabin or bungalow             |\n| 6    | Campground\
@@ -654,16 +655,16 @@ info:
     \                    |\n| 5004 | Homestay                      |\n| 5005 | Japanese-style\
     \ Business Hotel |\n| 5006 | Holiday Home                  |\n| 5007 | Country\
     \ house                 |\n| 5008 | Capsule Hotel                 |\n| 5009 |\
-    \ Holiday Park                  |\n\n### unitTypeCode\n\n| Code | Name       \
-    \      |\n| ---- | ---------------- |\n| 1    | Apartment        |\n| 4    | Quadruple\
+    \ Holiday Park                  |\n\n## unitTypeCode\n\n| Code | Name        \
+    \     |\n| ---- | ---------------- |\n| 1    | Apartment        |\n| 4    | Quadruple\
     \        |\n| 5    | Suite            |\n| 7    | Triple           |\n| 8    |\
     \ Twin             |\n| 9    | Double           |\n| 10   | Single           |\n\
     | 12   | Studio           |\n| 13   | Family           |\n| 24   | Twin/Double\
     \      |\n| 25   | Dormitory room   |\n| 26   | Bed in Dormitory |\n| 27   | Bungalow\
     \         |\n| 28   | Chalet           |\n| 29   | Holiday home     |\n| 31  \
     \ | Villa            |\n| 32   | Mobile home      |\n| 33   | Tent           \
-    \  |\n\n### unitAmenityCode\n\n| Code  | Name                                \
-    \                         |\n| ----- | ------------------------------------------------------------\
+    \  |\n\n## unitAmenityCode\n\n| Code  | Name                                 \
+    \                        |\n| ----- | ------------------------------------------------------------\
     \ |\n| 1     | Adjoining rooms                                              |\n\
     | 2     | Air conditioning                                             |\n| 3\
     \     | Alarm clock                                                  |\n| 4  \
@@ -1123,7 +1124,7 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-  termsOfService: https://phrase.com/terms/
+  termsOfService: https://www.lodgea.com/terms.html
   title: LODGEA OTA Service API Reference
   version: 1.0.0
   x-logo:
@@ -1131,7 +1132,7 @@ info:
     altText: LODGEA logo
 externalDocs:
   description: Read the docs
-  url: https://docs.lodgea.com/
+  url: https://lodgea.redoc.ly/
 servers:
 - description: API for Europe customers
   url: https://api.eu.lodgea.io
