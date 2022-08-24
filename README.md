@@ -1,8 +1,8 @@
-# openapi-java-client
+# lodgea
 
 lodgea-java
 - API version: 1.0.0
-  - Build date: 2022-08-24T09:15:58.486685049Z[Etc/UTC]
+  - Build date: 2022-08-24T09:34:40.293758706Z[Etc/UTC]
 
 LODGEA SDK for Java. Check out https://lodgea.redoc.ly for more information.
 
@@ -38,8 +38,8 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>org.openapitools</groupId>
-  <artifactId>openapi-java-client</artifactId>
+  <groupId>com.lodgea</groupId>
+  <artifactId>lodgea</artifactId>
   <version>1.0.0</version>
   <scope>compile</scope>
 </dependency>
@@ -51,12 +51,12 @@ Add this dependency to your project's build file:
 
 ```groovy
   repositories {
-    mavenCentral()     // Needed if the 'openapi-java-client' jar has been published to maven central.
-    mavenLocal()       // Needed if the 'openapi-java-client' jar has been published to the local maven repo.
+    mavenCentral()     // Needed if the 'lodgea' jar has been published to maven central.
+    mavenLocal()       // Needed if the 'lodgea' jar has been published to the local maven repo.
   }
 
   dependencies {
-     implementation "org.openapitools:openapi-java-client:1.0.0"
+     implementation "com.lodgea:lodgea:1.0.0"
   }
 ```
 
@@ -70,7 +70,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/openapi-java-client-1.0.0.jar`
+* `target/lodgea-1.0.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -80,12 +80,12 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.AvailabilityApi;
+import com.lodgea.ApiClient;
+import com.lodgea.ApiException;
+import com.lodgea.Configuration;
+import com.lodgea.auth.*;
+import com.lodgea.models.*;
+import com.lodgea.controllers.AvailabilityApi;
 
 public class Example {
   public static void main(String[] args) {

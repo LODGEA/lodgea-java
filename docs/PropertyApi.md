@@ -18,12 +18,12 @@ Get all information about a specific property by its ID. This parameter is requi
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.PropertyApi;
+import com.lodgea.ApiClient;
+import com.lodgea.ApiException;
+import com.lodgea.Configuration;
+import com.lodgea.auth.*;
+import com.lodgea.models.*;
+import com.lodgea.controllers.PropertyApi;
 
 public class Example {
   public static void main(String[] args) {

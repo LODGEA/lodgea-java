@@ -18,12 +18,12 @@ Get availability information based on search criteria. The possible values for t
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.AvailabilityApi;
+import com.lodgea.ApiClient;
+import com.lodgea.ApiException;
+import com.lodgea.Configuration;
+import com.lodgea.auth.*;
+import com.lodgea.models.*;
+import com.lodgea.controllers.AvailabilityApi;
 
 public class Example {
   public static void main(String[] args) {

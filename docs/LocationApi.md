@@ -18,12 +18,12 @@ Get a location by search text in free from. This parameter is required.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.LocationApi;
+import com.lodgea.ApiClient;
+import com.lodgea.ApiException;
+import com.lodgea.Configuration;
+import com.lodgea.auth.*;
+import com.lodgea.models.*;
+import com.lodgea.controllers.LocationApi;
 
 public class Example {
   public static void main(String[] args) {
