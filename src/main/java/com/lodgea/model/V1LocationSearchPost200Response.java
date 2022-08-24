@@ -50,7 +50,7 @@ import com.lodgea.JSON;
 /**
  * V1LocationSearchPost200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-24T11:46:35.796667073Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-24T11:59:02.856358577Z[Etc/UTC]")
 public class V1LocationSearchPost200Response {
   public static final String SERIALIZED_NAME_LANGUAGE_CODE = "languageCode";
   @SerializedName(SERIALIZED_NAME_LANGUAGE_CODE)
