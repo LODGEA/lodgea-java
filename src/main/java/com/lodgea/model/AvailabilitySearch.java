@@ -51,7 +51,7 @@ import com.lodgea.JSON;
 /**
  * AvailabilitySearch
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-24T11:59:02.856358577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-24T15:01:18.256960651Z[Etc/UTC]")
 public class AvailabilitySearch {
   public static final String SERIALIZED_NAME_ADULT_COUNT = "adultCount";
   @SerializedName(SERIALIZED_NAME_ADULT_COUNT)
