@@ -49,7 +49,7 @@ import com.lodgea.JSON;
 /**
  * V1AvailabilitySearchPost200ResponseListInnerAttractionListInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-24T11:37:52.194432653Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-24T11:46:35.796667073Z[Etc/UTC]")
 public class V1AvailabilitySearchPost200ResponseListInnerAttractionListInner {
   public static final String SERIALIZED_NAME_TYPE_CODE = "typeCode";
   @SerializedName(SERIALIZED_NAME_TYPE_CODE)

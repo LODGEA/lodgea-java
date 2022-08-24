@@ -50,7 +50,7 @@ import com.lodgea.JSON;
 /**
  * V1PropertyGetPost200ResponsePropertyFacilityInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-24T11:37:52.194432653Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-24T11:46:35.796667073Z[Etc/UTC]")
 public class V1PropertyGetPost200ResponsePropertyFacilityInfo {
   public static final String SERIALIZED_NAME_GUEST_ROOM_LIST = "guestRoomList";
   @SerializedName(SERIALIZED_NAME_GUEST_ROOM_LIST)
