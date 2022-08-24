@@ -48,7 +48,7 @@ import com.lodgea.JSON;
 /**
  * V1AvailabilitySearchPost200ResponseListInnerLowestPrice
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-24T09:34:40.293758706Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-24T11:37:52.194432653Z[Etc/UTC]")
 public class V1AvailabilitySearchPost200ResponseListInnerLowestPrice {
   public static final String SERIALIZED_NAME_AMOUNT = "amount";
   @SerializedName(SERIALIZED_NAME_AMOUNT)

@@ -49,7 +49,7 @@ import com.lodgea.JSON;
 /**
  * V1PropertyGetPost200ResponseProductListInnerRatePlanListInnerPricingListInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-24T09:34:40.293758706Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-24T11:37:52.194432653Z[Etc/UTC]")
 public class V1PropertyGetPost200ResponseProductListInnerRatePlanListInnerPricingListInner {
   public static final String SERIALIZED_NAME_DATE_TIME = "dateTime";
   @SerializedName(SERIALIZED_NAME_DATE_TIME)
