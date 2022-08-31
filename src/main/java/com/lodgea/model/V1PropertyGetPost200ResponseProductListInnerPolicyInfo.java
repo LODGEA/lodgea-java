@@ -53,7 +53,7 @@ import com.lodgea.JSON;
 /**
  * V1PropertyGetPost200ResponseProductListInnerPolicyInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-24T15:01:18.256960651Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-31T14:58:29.143647463Z[Etc/UTC]")
 public class V1PropertyGetPost200ResponseProductListInnerPolicyInfo {
   public static final String SERIALIZED_NAME_CHECK_IN_TIME = "checkInTime";
   @SerializedName(SERIALIZED_NAME_CHECK_IN_TIME)
