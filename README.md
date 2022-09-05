@@ -2,7 +2,7 @@
 
 lodgea-java
 - API version: 1.0.0
-  - Build date: 2022-09-05T15:55:54.541212362Z[Etc/UTC]
+  - Build date: 2022-09-05T16:14:26.477802845Z[Etc/UTC]
 
 LODGEA SDK for Java. Check out https://docs.lodgea.io for more information.
 
@@ -202,5 +202,5 @@ It's recommended to create an instance of `ApiClient` per thread in a multithrea
 
 ## Author
 
-info@lodgea.com
+support@lodgea.com
 
