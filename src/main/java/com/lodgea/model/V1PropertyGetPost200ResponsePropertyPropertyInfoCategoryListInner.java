@@ -48,7 +48,7 @@ import com.lodgea.JSON;
 /**
  * V1PropertyGetPost200ResponsePropertyPropertyInfoCategoryListInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-05T14:19:17.644017046Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-05T14:33:56.924929748Z[Etc/UTC]")
 public class V1PropertyGetPost200ResponsePropertyPropertyInfoCategoryListInner {
   public static final String SERIALIZED_NAME_EXISTS = "exists";
   @SerializedName(SERIALIZED_NAME_EXISTS)
