@@ -52,7 +52,7 @@ import com.lodgea.JSON;
 /**
  * V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-05T15:47:09.959793764Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-05T15:55:54.541212362Z[Etc/UTC]")
 public class V1PropertyGetPost200ResponsePropertyFacilityInfoGuestRoomListInner {
   public static final String SERIALIZED_NAME_IS_ACTIVE = "isActive";
   @SerializedName(SERIALIZED_NAME_IS_ACTIVE)
