@@ -1,6 +1,6 @@
 /*
  * lodgea-java
- * LODGEA SDK for Java. Check out https://lodgea.redoc.ly for more information.
+ * LODGEA SDK for Java. Check out https://docs.lodgea.io for more information.
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: info@lodgea.com

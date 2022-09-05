@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   contact:
     email: info@lodgea.com
-  description: LODGEA SDK for Java. Check out https://lodgea.redoc.ly for more information.
+  description: LODGEA SDK for Java. Check out https://docs.lodgea.io for more information.
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
@@ -14,7 +14,7 @@ info:
     altText: LODGEA logo
 externalDocs:
   description: Read the docs
-  url: https://lodgea.redoc.ly/
+  url: https://docs.lodgea.io/
 servers:
 - description: API for Europe customers
   url: https://api.eu.lodgea.io

@@ -1,6 +1,6 @@
 /*
  * lodgea-java
- * LODGEA SDK for Java. Check out https://lodgea.redoc.ly for more information.
+ * LODGEA SDK for Java. Check out https://docs.lodgea.io for more information.
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: info@lodgea.com
@@ -47,7 +47,7 @@ import com.lodgea.JSON;
 /**
  * PropertyGet
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-31T14:58:29.143647463Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-05T14:11:24.889721894Z[Etc/UTC]")
 public class PropertyGet {
   public static final String SERIALIZED_NAME_PROPERTY_ID = "propertyId";
   @SerializedName(SERIALIZED_NAME_PROPERTY_ID)
