@@ -51,7 +51,7 @@ import com.lodgea.JSON;
 /**
  * V1PropertyGetPost200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-05T16:14:26.477802845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-06T06:59:27.988647194Z[Etc/UTC]")
 public class V1PropertyGetPost200Response {
   public static final String SERIALIZED_NAME_VERSION_ID = "versionId";
   @SerializedName(SERIALIZED_NAME_VERSION_ID)
