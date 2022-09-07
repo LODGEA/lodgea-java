@@ -50,7 +50,7 @@ import com.lodgea.JSON;
 /**
  * V1AvailabilitySearchPost200ResponseListInnerMediaListInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-07T14:37:29.796161556Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-07T14:54:29.283650757Z[Etc/UTC]")
 public class V1AvailabilitySearchPost200ResponseListInnerMediaListInner {
   public static final String SERIALIZED_NAME_TAG_CODE_LIST = "tagCodeList";
   @SerializedName(SERIALIZED_NAME_TAG_CODE_LIST)
