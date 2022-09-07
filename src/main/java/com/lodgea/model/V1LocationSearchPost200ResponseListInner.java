@@ -48,7 +48,7 @@ import com.lodgea.JSON;
 /**
  * V1LocationSearchPost200ResponseListInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-07T14:05:49.716494803Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-07T14:31:24.250712094Z[Etc/UTC]")
 public class V1LocationSearchPost200ResponseListInner {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
