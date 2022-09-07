@@ -1,8 +1,8 @@
 # lodgea
 
 lodgea-java
-- API version: 1.0.0
-  - Build date: 2022-09-07T14:00:10.243514647Z[Etc/UTC]
+- API version: 1.0.1
+  - Build date: 2022-09-07T14:05:49.716494803Z[Etc/UTC]
 
 LODGEA SDK for Java. Check out https://docs.lodgea.io for more information.
 
@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.lodgea</groupId>
   <artifactId>lodgea</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.lodgea:lodgea:1.0.0"
+     implementation "com.lodgea:lodgea:1.0.1"
   }
 ```
 
@@ -70,7 +70,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/lodgea-1.0.0.jar`
+* `target/lodgea-1.0.1.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

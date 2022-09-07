@@ -8,7 +8,7 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: https://www.lodgea.com/terms.html
   title: lodgea-java
-  version: 1.0.0
+  version: 1.0.1
   x-logo:
     url: https://docs.lodgea.io/lodgea.svg
     altText: LODGEA API Documentation
