@@ -47,7 +47,7 @@ import com.lodgea.JSON;
 /**
  * V1PropertyGetPost200ResponsePropertyPolicyListInnerPetsPolicy
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-06T06:59:27.988647194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-07T14:00:10.243514647Z[Etc/UTC]")
 public class V1PropertyGetPost200ResponsePropertyPolicyListInnerPetsPolicy {
   public static final String SERIALIZED_NAME_ALLOWED = "allowed";
   @SerializedName(SERIALIZED_NAME_ALLOWED)

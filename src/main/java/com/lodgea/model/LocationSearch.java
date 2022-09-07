@@ -47,11 +47,19 @@ import com.lodgea.JSON;
 /**
  * LocationSearch
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-06T06:59:27.988647194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-07T14:00:10.243514647Z[Etc/UTC]")
 public class LocationSearch {
   public static final String SERIALIZED_NAME_SEARCH_TEXT = "searchText";
   @SerializedName(SERIALIZED_NAME_SEARCH_TEXT)
   private String searchText;
+
+  public static final String SERIALIZED_NAME_CURRENCY_CODE = "currencyCode";
+  @SerializedName(SERIALIZED_NAME_CURRENCY_CODE)
+  private String currencyCode;
+
+  public static final String SERIALIZED_NAME_LANGUAGE_CODE = "languageCode";
+  @SerializedName(SERIALIZED_NAME_LANGUAGE_CODE)
+  private String languageCode;
 
   public LocationSearch() { 
   }
@@ -66,8 +74,8 @@ public class LocationSearch {
    * Get searchText
    * @return searchText
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "Hotel Stadt Hamburg", required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "Hotel Stadt Hamburg", value = "")
 
   public String getSearchText() {
     return searchText;
@@ -76,6 +84,52 @@ public class LocationSearch {
 
   public void setSearchText(String searchText) {
     this.searchText = searchText;
+  }
+
+
+  public LocationSearch currencyCode(String currencyCode) {
+    
+    this.currencyCode = currencyCode;
+    return this;
+  }
+
+   /**
+   * Get currencyCode
+   * @return currencyCode
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "EUR", value = "")
+
+  public String getCurrencyCode() {
+    return currencyCode;
+  }
+
+
+  public void setCurrencyCode(String currencyCode) {
+    this.currencyCode = currencyCode;
+  }
+
+
+  public LocationSearch languageCode(String languageCode) {
+    
+    this.languageCode = languageCode;
+    return this;
+  }
+
+   /**
+   * Get languageCode
+   * @return languageCode
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "en", value = "")
+
+  public String getLanguageCode() {
+    return languageCode;
+  }
+
+
+  public void setLanguageCode(String languageCode) {
+    this.languageCode = languageCode;
   }
 
 
@@ -89,12 +143,14 @@ public class LocationSearch {
       return false;
     }
     LocationSearch locationSearch = (LocationSearch) o;
-    return Objects.equals(this.searchText, locationSearch.searchText);
+    return Objects.equals(this.searchText, locationSearch.searchText) &&
+        Objects.equals(this.currencyCode, locationSearch.currencyCode) &&
+        Objects.equals(this.languageCode, locationSearch.languageCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(searchText);
+    return Objects.hash(searchText, currencyCode, languageCode);
   }
 
   @Override
@@ -102,6 +158,8 @@ public class LocationSearch {
     StringBuilder sb = new StringBuilder();
     sb.append("class LocationSearch {\n");
     sb.append("    searchText: ").append(toIndentedString(searchText)).append("\n");
+    sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
+    sb.append("    languageCode: ").append(toIndentedString(languageCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -125,10 +183,11 @@ public class LocationSearch {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("searchText");
+    openapiFields.add("currencyCode");
+    openapiFields.add("languageCode");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("searchText");
   }
 
  /**
@@ -153,15 +212,14 @@ public class LocationSearch {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `LocationSearch` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : LocationSearch.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
       if (jsonObj.get("searchText") != null && !jsonObj.get("searchText").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `searchText` to be a primitive type in the JSON string but got `%s`", jsonObj.get("searchText").toString()));
+      }
+      if (jsonObj.get("currencyCode") != null && !jsonObj.get("currencyCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `currencyCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("currencyCode").toString()));
+      }
+      if (jsonObj.get("languageCode") != null && !jsonObj.get("languageCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `languageCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("languageCode").toString()));
       }
   }
 

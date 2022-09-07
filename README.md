@@ -2,7 +2,7 @@
 
 lodgea-java
 - API version: 1.0.0
-  - Build date: 2022-09-06T06:59:27.988647194Z[Etc/UTC]
+  - Build date: 2022-09-07T14:00:10.243514647Z[Etc/UTC]
 
 LODGEA SDK for Java. Check out https://docs.lodgea.io for more information.
 

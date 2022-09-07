@@ -53,7 +53,7 @@ import com.lodgea.JSON;
 /**
  * V1PropertyGetPost200ResponseProductListInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-06T06:59:27.988647194Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-07T14:00:10.243514647Z[Etc/UTC]")
 public class V1PropertyGetPost200ResponseProductListInner {
   public static final String SERIALIZED_NAME_PROPERTY_ID = "propertyId";
   @SerializedName(SERIALIZED_NAME_PROPERTY_ID)

@@ -10,8 +10,8 @@ info:
   title: lodgea-java
   version: 1.0.0
   x-logo:
-    url: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXl-QhaTubd2d5u-vb0H05ldQ6MgwmhAGa8J7ZikSj&s
-    altText: LODGEA logo
+    url: https://docs.lodgea.io/lodgea.svg
+    altText: LODGEA API Documentation
 externalDocs:
   description: Read the docs
   url: https://docs.lodgea.io/
@@ -296,8 +296,12 @@ components:
         searchText:
           example: Hotel Stadt Hamburg
           type: string
-      required:
-      - searchText
+        currencyCode:
+          example: EUR
+          type: string
+        languageCode:
+          example: en
+          type: string
       type: object
     availabilitySearch:
       properties:

@@ -7,7 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**searchText** | **String** |  |  |
+|**searchText** | **String** |  |  [optional] |
+|**currencyCode** | **String** |  |  [optional] |
+|**languageCode** | **String** |  |  [optional] |
 
 
 
