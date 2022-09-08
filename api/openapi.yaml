@@ -8,7 +8,7 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: https://www.lodgea.com/terms.html
   title: lodgea-java
-  version: 1.0.1
+  version: 1.0.2
   x-logo:
     url: https://docs.lodgea.io/lodgea.svg
     altText: LODGEA API Documentation
@@ -91,6 +91,137 @@ paths:
       summary: Get Property by ID
       tags:
       - property
+      x-content-type: application/json
+      x-accepts: application/json
+  /v1/property/list:
+    post:
+      description: List properties by a specific keyword.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/propertyList'
+        description: Provide the search keyword and optionally a page token to fetch
+          further responses. The page token can be added if additional results should
+          be returned. It is a base64 encoded dictionary and included in the first
+          response in case not all results were delivered
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v1_property_list_post_200_response'
+          description: Successful operation
+        "400":
+          description: Bad request - missing parameter
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "401":
+          description: API Key is missing or invalid
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "403":
+          description: Forbidden
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "404":
+          description: Not Found
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "405":
+          description: Invalid input
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "429":
+          description: Rate Limiting
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "500":
+          description: Internal server error
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "503":
+          description: Server error
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+      security:
+      - ApiKeyAuth: []
+      summary: List properties by a specific keyword
+      tags:
+      - property
+      x-content-type: application/json
+      x-accepts: application/json
+  /v1/availability/get:
+    post:
+      description: Get availability information based on a specific property.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/availabilityGet'
+        description: Availability get parameter
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/_v1_availability_get_post_200_response'
+          description: Successful operation
+        "400":
+          description: Bad request - missing parameter
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "401":
+          description: API Key is missing or invalid
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "403":
+          description: Forbidden
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "404":
+          description: Not Found
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "405":
+          description: Invalid input
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "429":
+          description: Rate Limiting
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "500":
+          description: Internal server error
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+        "503":
+          description: Server error
+          headers:
+            apiKey:
+              $ref: '#/components/headers/apiKey'
+      security:
+      - ApiKeyAuth: []
+      summary: Get Availability for Property
+      tags:
+      - availability
       x-content-type: application/json
       x-accepts: application/json
   /v1/availability/search:
@@ -272,11 +403,23 @@ components:
       headers:
         apiKey:
           $ref: '#/components/headers/apiKey'
+    propertyList:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/_v1_property_list_post_200_response'
+      description: Successful operation
     locationSearch:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/_v1_location_search_post_200_response'
+      description: Successful operation
+    availabilityGet:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/_v1_availability_get_post_200_response'
       description: Successful operation
     availabilitySearch:
       content:
@@ -301,6 +444,15 @@ components:
           type: string
         languageCode:
           example: en
+          type: string
+      type: object
+    availabilityGet:
+      properties:
+        propertyCode:
+          example: strandresidenz-sylt
+          type: string
+        currencyCode:
+          example: EUR
           type: string
       type: object
     availabilitySearch:
@@ -372,6 +524,15 @@ components:
       properties:
         propertyId:
           example: strandresidenz-sylt
+          type: string
+      type: object
+    propertyList:
+      properties:
+        keyword:
+          example: Strandresidenz Sylt
+          type: string
+        pageToken:
+          example: eyJ0ZW5hbnRDb2RlIjoiZG1vLWRlbW8iLCJuYW1lIjoiTGFuZGhhdXMgVHJlc2tlcnNhbmQiLCJwcm9wZXJ0eUlkIjoibGFuZGhhdXMtdHJlc2tlcnNhbmQifQ==
           type: string
       type: object
     _v1_property_get_post_200_response_property_recordCreated:
@@ -3513,6 +3674,367 @@ components:
         productList:
           items:
             $ref: '#/components/schemas/_v1_property_get_post_200_response_productList_inner'
+          type: array
+      type: object
+    _v1_property_list_post_200_response_list_inner:
+      example:
+        image: obj_1280x960_54620_001.jpg
+        lastUpdated: 1652091337389
+        address: Nordhedig 20 25980 Sylt Germany
+        name: Strandresidenz Sylt
+        published: true
+        propertyId: strandresidenz-sylt
+      properties:
+        published:
+          type: boolean
+        name:
+          example: Strandresidenz Sylt
+          type: string
+        propertyId:
+          example: strandresidenz-sylt
+          type: string
+        image:
+          example: obj_1280x960_54620_001.jpg
+          type: string
+        address:
+          example: Nordhedig 20 25980 Sylt Germany
+          type: string
+        lastUpdated:
+          example: 1652091337389
+          type: number
+      type: object
+    _v1_property_list_post_200_response:
+      example:
+        pageToken: pageToken
+        list:
+        - image: obj_1280x960_54620_001.jpg
+          lastUpdated: 1652091337389
+          address: Nordhedig 20 25980 Sylt Germany
+          name: Strandresidenz Sylt
+          published: true
+          propertyId: strandresidenz-sylt
+        - image: obj_1280x960_54620_001.jpg
+          lastUpdated: 1652091337389
+          address: Nordhedig 20 25980 Sylt Germany
+          name: Strandresidenz Sylt
+          published: true
+          propertyId: strandresidenz-sylt
+      properties:
+        list:
+          items:
+            $ref: '#/components/schemas/_v1_property_list_post_200_response_list_inner'
+          type: array
+        pageToken:
+          type: string
+      type: object
+    _v1_availability_get_post_200_response_ratePlanList_inner_pricingList_inner_priceList:
+      example:
+        "11": 659.89
+        "12": 719.88
+        "13": 779.87
+        "14": 839.86
+        "15": 899.85
+        "16": 959.84
+        "17": 1019.83
+        "18": 1079.82
+        "19": 1139.81
+        "3": 179.97
+        "4": 239.96
+        "5": 299.95
+        "6": 359.94
+        "7": 419.93
+        "8": 479.92
+        "9": 539.91
+        "20": 1199.8
+        "10": 599.9
+      properties:
+        "3":
+          example: 179.97
+          type: number
+        "4":
+          example: 239.96
+          type: number
+        "5":
+          example: 299.95
+          type: number
+        "6":
+          example: 359.94
+          type: number
+        "7":
+          example: 419.93
+          type: number
+        "8":
+          example: 479.92
+          type: number
+        "9":
+          example: 539.91
+          type: number
+        "10":
+          example: 599.9
+          type: number
+        "11":
+          example: 659.89
+          type: number
+        "12":
+          example: 719.88
+          type: number
+        "13":
+          example: 779.87
+          type: number
+        "14":
+          example: 839.86
+          type: number
+        "15":
+          example: 899.85
+          type: number
+        "16":
+          example: 959.84
+          type: number
+        "17":
+          example: 1019.83
+          type: number
+        "18":
+          example: 1079.82
+          type: number
+        "19":
+          example: 1139.81
+          type: number
+        "20":
+          example: 1199.8
+          type: number
+      type: object
+    _v1_availability_get_post_200_response_ratePlanList_inner_pricingList_inner:
+      example:
+        dateTime: 1662595200000
+        occupancy: 1
+        currencyCode: EUR
+        priceList:
+          "11": 659.89
+          "12": 719.88
+          "13": 779.87
+          "14": 839.86
+          "15": 899.85
+          "16": 959.84
+          "17": 1019.83
+          "18": 1079.82
+          "19": 1139.81
+          "3": 179.97
+          "4": 239.96
+          "5": 299.95
+          "6": 359.94
+          "7": 419.93
+          "8": 479.92
+          "9": 539.91
+          "20": 1199.8
+          "10": 599.9
+      properties:
+        dateTime:
+          example: 1662595200000
+          type: number
+        occupancy:
+          example: 1
+          type: number
+        priceList:
+          $ref: '#/components/schemas/_v1_availability_get_post_200_response_ratePlanList_inner_pricingList_inner_priceList'
+        currencyCode:
+          example: EUR
+          type: string
+      type: object
+    _v1_availability_get_post_200_response_ratePlanList_inner:
+      example:
+        code: standard-8436
+        name: Standard 8436
+        active: true
+        pricingList:
+        - dateTime: 1662595200000
+          occupancy: 1
+          currencyCode: EUR
+          priceList:
+            "11": 659.89
+            "12": 719.88
+            "13": 779.87
+            "14": 839.86
+            "15": 899.85
+            "16": 959.84
+            "17": 1019.83
+            "18": 1079.82
+            "19": 1139.81
+            "3": 179.97
+            "4": 239.96
+            "5": 299.95
+            "6": 359.94
+            "7": 419.93
+            "8": 479.92
+            "9": 539.91
+            "20": 1199.8
+            "10": 599.9
+        - dateTime: 1662595200000
+          occupancy: 1
+          currencyCode: EUR
+          priceList:
+            "11": 659.89
+            "12": 719.88
+            "13": 779.87
+            "14": 839.86
+            "15": 899.85
+            "16": 959.84
+            "17": 1019.83
+            "18": 1079.82
+            "19": 1139.81
+            "3": 179.97
+            "4": 239.96
+            "5": 299.95
+            "6": 359.94
+            "7": 419.93
+            "8": 479.92
+            "9": 539.91
+            "20": 1199.8
+            "10": 599.9
+      properties:
+        active:
+          type: boolean
+        name:
+          example: Standard 8436
+          type: string
+        code:
+          example: standard-8436
+          type: string
+        pricingList:
+          items:
+            $ref: '#/components/schemas/_v1_availability_get_post_200_response_ratePlanList_inner_pricingList_inner'
+          type: array
+      type: object
+    _v1_availability_get_post_200_response_roomTypeList_inner:
+      example:
+        typeCode: strandresidenz-sylt
+      properties:
+        typeCode:
+          example: strandresidenz-sylt
+          type: string
+      type: object
+    _v1_availability_get_post_200_response:
+      example:
+        roomTypeList:
+        - typeCode: strandresidenz-sylt
+        - typeCode: strandresidenz-sylt
+        ratePlanList:
+        - code: standard-8436
+          name: Standard 8436
+          active: true
+          pricingList:
+          - dateTime: 1662595200000
+            occupancy: 1
+            currencyCode: EUR
+            priceList:
+              "11": 659.89
+              "12": 719.88
+              "13": 779.87
+              "14": 839.86
+              "15": 899.85
+              "16": 959.84
+              "17": 1019.83
+              "18": 1079.82
+              "19": 1139.81
+              "3": 179.97
+              "4": 239.96
+              "5": 299.95
+              "6": 359.94
+              "7": 419.93
+              "8": 479.92
+              "9": 539.91
+              "20": 1199.8
+              "10": 599.9
+          - dateTime: 1662595200000
+            occupancy: 1
+            currencyCode: EUR
+            priceList:
+              "11": 659.89
+              "12": 719.88
+              "13": 779.87
+              "14": 839.86
+              "15": 899.85
+              "16": 959.84
+              "17": 1019.83
+              "18": 1079.82
+              "19": 1139.81
+              "3": 179.97
+              "4": 239.96
+              "5": 299.95
+              "6": 359.94
+              "7": 419.93
+              "8": 479.92
+              "9": 539.91
+              "20": 1199.8
+              "10": 599.9
+        - code: standard-8436
+          name: Standard 8436
+          active: true
+          pricingList:
+          - dateTime: 1662595200000
+            occupancy: 1
+            currencyCode: EUR
+            priceList:
+              "11": 659.89
+              "12": 719.88
+              "13": 779.87
+              "14": 839.86
+              "15": 899.85
+              "16": 959.84
+              "17": 1019.83
+              "18": 1079.82
+              "19": 1139.81
+              "3": 179.97
+              "4": 239.96
+              "5": 299.95
+              "6": 359.94
+              "7": 419.93
+              "8": 479.92
+              "9": 539.91
+              "20": 1199.8
+              "10": 599.9
+          - dateTime: 1662595200000
+            occupancy: 1
+            currencyCode: EUR
+            priceList:
+              "11": 659.89
+              "12": 719.88
+              "13": 779.87
+              "14": 839.86
+              "15": 899.85
+              "16": 959.84
+              "17": 1019.83
+              "18": 1079.82
+              "19": 1139.81
+              "3": 179.97
+              "4": 239.96
+              "5": 299.95
+              "6": 359.94
+              "7": 419.93
+              "8": 479.92
+              "9": 539.91
+              "20": 1199.8
+              "10": 599.9
+        name: Standard
+        mealPlanList:
+        - code: 14
+          name: Room only
+        - code: 14
+          name: Room only
+      properties:
+        ratePlanList:
+          items:
+            $ref: '#/components/schemas/_v1_availability_get_post_200_response_ratePlanList_inner'
+          type: array
+        name:
+          example: Standard
+          type: string
+        mealPlanList:
+          items:
+            $ref: '#/components/schemas/_v1_property_get_post_200_response_productList_inner_mealPlanList_inner'
+          type: array
+        roomTypeList:
+          items:
+            $ref: '#/components/schemas/_v1_availability_get_post_200_response_roomTypeList_inner'
           type: array
       type: object
     _v1_availability_search_post_200_response_list_inner_geo_location:

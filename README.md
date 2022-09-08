@@ -1,8 +1,8 @@
 # lodgea
 
 lodgea-java
-- API version: 1.0.1
-  - Build date: 2022-09-07T14:54:29.283650757Z[Etc/UTC]
+- API version: 1.0.2
+  - Build date: 2022-09-08T10:01:38.583514510Z[Etc/UTC]
 
 LODGEA SDK for Java. Check out https://docs.lodgea.io for more information.
 
@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.lodgea</groupId>
   <artifactId>lodgea</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.lodgea:lodgea:1.0.1"
+     implementation "com.lodgea:lodgea:1.0.2"
   }
 ```
 
@@ -70,7 +70,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/lodgea-1.0.1.jar`
+* `target/lodgea-1.0.2.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -99,12 +99,12 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     AvailabilityApi apiInstance = new AvailabilityApi(defaultClient);
-    AvailabilitySearch availabilitySearch = new AvailabilitySearch(); // AvailabilitySearch | Search Criteria, all parameters are optional
+    AvailabilityGet availabilityGet = new AvailabilityGet(); // AvailabilityGet | Availability get parameter
     try {
-      V1AvailabilitySearchPost200Response result = apiInstance.v1AvailabilitySearchPost(availabilitySearch);
+      V1AvailabilityGetPost200Response result = apiInstance.v1AvailabilityGetPost(availabilityGet);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling AvailabilityApi#v1AvailabilitySearchPost");
+      System.err.println("Exception when calling AvailabilityApi#v1AvailabilityGetPost");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -121,16 +121,25 @@ All URIs are relative to *https://api.eu.lodgea.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AvailabilityApi* | [**v1AvailabilityGetPost**](docs/AvailabilityApi.md#v1AvailabilityGetPost) | **POST** /v1/availability/get | Get Availability for Property
 *AvailabilityApi* | [**v1AvailabilitySearchPost**](docs/AvailabilityApi.md#v1AvailabilitySearchPost) | **POST** /v1/availability/search | Search for Availability
 *LocationApi* | [**v1LocationSearchPost**](docs/LocationApi.md#v1LocationSearchPost) | **POST** /v1/location/search | Search for Location
 *PropertyApi* | [**v1PropertyGetPost**](docs/PropertyApi.md#v1PropertyGetPost) | **POST** /v1/property/get | Get Property by ID
+*PropertyApi* | [**v1PropertyListPost**](docs/PropertyApi.md#v1PropertyListPost) | **POST** /v1/property/list | List properties by a specific keyword
 
 
 ## Documentation for Models
 
+ - [AvailabilityGet](docs/AvailabilityGet.md)
  - [AvailabilitySearch](docs/AvailabilitySearch.md)
  - [LocationSearch](docs/LocationSearch.md)
  - [PropertyGet](docs/PropertyGet.md)
+ - [PropertyList](docs/PropertyList.md)
+ - [V1AvailabilityGetPost200Response](docs/V1AvailabilityGetPost200Response.md)
+ - [V1AvailabilityGetPost200ResponseRatePlanListInner](docs/V1AvailabilityGetPost200ResponseRatePlanListInner.md)
+ - [V1AvailabilityGetPost200ResponseRatePlanListInnerPricingListInner](docs/V1AvailabilityGetPost200ResponseRatePlanListInnerPricingListInner.md)
+ - [V1AvailabilityGetPost200ResponseRatePlanListInnerPricingListInnerPriceList](docs/V1AvailabilityGetPost200ResponseRatePlanListInnerPricingListInnerPriceList.md)
+ - [V1AvailabilityGetPost200ResponseRoomTypeListInner](docs/V1AvailabilityGetPost200ResponseRoomTypeListInner.md)
  - [V1AvailabilitySearchPost200Response](docs/V1AvailabilitySearchPost200Response.md)
  - [V1AvailabilitySearchPost200ResponseListInner](docs/V1AvailabilitySearchPost200ResponseListInner.md)
  - [V1AvailabilitySearchPost200ResponseListInnerAttractionListInner](docs/V1AvailabilitySearchPost200ResponseListInnerAttractionListInner.md)
@@ -184,6 +193,8 @@ Class | Method | HTTP request | Description
  - [V1PropertyGetPost200ResponsePropertyServiceListInner](docs/V1PropertyGetPost200ResponsePropertyServiceListInner.md)
  - [V1PropertyGetPost200ResponsePropertyTransaction](docs/V1PropertyGetPost200ResponsePropertyTransaction.md)
  - [V1PropertyGetPost200ResponsePropertyTransactionExternalListInner](docs/V1PropertyGetPost200ResponsePropertyTransactionExternalListInner.md)
+ - [V1PropertyListPost200Response](docs/V1PropertyListPost200Response.md)
+ - [V1PropertyListPost200ResponseListInner](docs/V1PropertyListPost200ResponseListInner.md)
 
 
 ## Documentation for Authorization
