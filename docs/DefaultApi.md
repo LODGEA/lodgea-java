@@ -2,18 +2,18 @@
 
 All URIs are relative to *https://api.eu.lodgea.io/v1*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**availabilitySearchPost**](DefaultApi.md#availabilitySearchPost) | **POST** /availability/search | Search for availability |
-| [**locationSearchPost**](DefaultApi.md#locationSearchPost) | **POST** /location/search | Search for location |
-| [**propertiesGet**](DefaultApi.md#propertiesGet) | **GET** /properties | List (filtered) properties |
-| [**propertiesPropertyIdAvailabilityGet**](DefaultApi.md#propertiesPropertyIdAvailabilityGet) | **GET** /properties/{propertyId}/availability | Get a properties availability |
-| [**propertiesPropertyIdGet**](DefaultApi.md#propertiesPropertyIdGet) | **GET** /properties/{propertyId} | Get a properties details |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**availabilitySearchPost**](DefaultApi.md#availabilitySearchPost) | **POST** /availability/search | Search for availability
+[**locationSearchPost**](DefaultApi.md#locationSearchPost) | **POST** /location/search | Search for location
+[**propertiesGet**](DefaultApi.md#propertiesGet) | **GET** /properties | List (filtered) properties
+[**propertiesPropertyIdAvailabilityGet**](DefaultApi.md#propertiesPropertyIdAvailabilityGet) | **GET** /properties/{propertyId}/availability | Get a properties availability
+[**propertiesPropertyIdGet**](DefaultApi.md#propertiesPropertyIdGet) | **GET** /properties/{propertyId} | Get a properties details
 
 
 <a name="availabilitySearchPost"></a>
 # **availabilitySearchPost**
-> AvailabilitySearchPost200Response availabilitySearchPost(availabilitySearchPostRequest)
+> InlineResponse2001 availabilitySearchPost(inlineObject1)
 
 Search for availability
 
@@ -41,9 +41,9 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
-    AvailabilitySearchPostRequest availabilitySearchPostRequest = new AvailabilitySearchPostRequest(); // AvailabilitySearchPostRequest | 
+    InlineObject1 inlineObject1 = new InlineObject1(); // InlineObject1 | 
     try {
-      AvailabilitySearchPost200Response result = apiInstance.availabilitySearchPost(availabilitySearchPostRequest);
+      InlineResponse2001 result = apiInstance.availabilitySearchPost(inlineObject1);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#availabilitySearchPost");
@@ -58,13 +58,13 @@ public class Example {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **availabilitySearchPostRequest** | [**AvailabilitySearchPostRequest**](AvailabilitySearchPostRequest.md)|  | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inlineObject1** | [**InlineObject1**](InlineObject1.md)|  | [optional]
 
 ### Return type
 
-[**AvailabilitySearchPost200Response**](AvailabilitySearchPost200Response.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -78,13 +78,13 @@ public class Example {
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Successful, a list of available properties matching the given criteria is returned. |  -  |
-| **400** | We validate all calls to our API in a strict manner using Zod. In case of any validation errors, we send back a 400 response with a list of all validation errors. For more info see https://github.com/colinhacks/zod/blob/master/ERROR_HANDLING.md. |  -  |
-| **403** | Unauthorized, the api key in the \&quot;apiKey\&quot; header field is invalid. |  -  |
+**200** | Successful, a list of available properties matching the given criteria is returned. |  -  |
+**400** | We validate all calls to our API in a strict manner using Zod. In case of any validation errors, we send back a 400 response with a list of all validation errors. For more info see https://github.com/colinhacks/zod/blob/master/ERROR_HANDLING.md. |  -  |
+**403** | Unauthorized, the api key in the \&quot;apiKey\&quot; header field is invalid. |  -  |
 
 <a name="locationSearchPost"></a>
 # **locationSearchPost**
-> LocationSearchPost200Response locationSearchPost(locationSearchPostRequest)
+> InlineResponse200 locationSearchPost(inlineObject)
 
 Search for location
 
@@ -112,9 +112,9 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
-    LocationSearchPostRequest locationSearchPostRequest = new LocationSearchPostRequest(); // LocationSearchPostRequest | 
+    InlineObject inlineObject = new InlineObject(); // InlineObject | 
     try {
-      LocationSearchPost200Response result = apiInstance.locationSearchPost(locationSearchPostRequest);
+      InlineResponse200 result = apiInstance.locationSearchPost(inlineObject);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#locationSearchPost");
@@ -129,13 +129,13 @@ public class Example {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **locationSearchPostRequest** | [**LocationSearchPostRequest**](LocationSearchPostRequest.md)|  | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inlineObject** | [**InlineObject**](InlineObject.md)|  | [optional]
 
 ### Return type
 
-[**LocationSearchPost200Response**](LocationSearchPost200Response.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -149,13 +149,13 @@ public class Example {
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Successful, a list of locations matching the given location search text is returned. |  -  |
-| **400** | We validate all calls to our API in a strict manner using Zod. In case of any validation errors, we send back a 400 response with a list of all validation errors. For more info see https://github.com/colinhacks/zod/blob/master/ERROR_HANDLING.md. |  -  |
-| **403** | Unauthorized, the api key in the \&quot;apiKey\&quot; header field is invalid. |  -  |
+**200** | Successful, a list of locations matching the given location search text is returned. |  -  |
+**400** | We validate all calls to our API in a strict manner using Zod. In case of any validation errors, we send back a 400 response with a list of all validation errors. For more info see https://github.com/colinhacks/zod/blob/master/ERROR_HANDLING.md. |  -  |
+**403** | Unauthorized, the api key in the \&quot;apiKey\&quot; header field is invalid. |  -  |
 
 <a name="propertiesGet"></a>
 # **propertiesGet**
-> PropertiesGet200Response propertiesGet(keyword, pageToken)
+> InlineResponse2002 propertiesGet(keyword, pageToken)
 
 List (filtered) properties
 
@@ -186,7 +186,7 @@ public class Example {
     String keyword = "Strandresidenz Sylt"; // String | 
     String pageToken = "eyJ0ZW5hbnRDb2RlIjoiZG1vLWRlbW8iLCJuYW1lIjoiTGFuZGhhdXMgVHJlc2tlcnNhbmQiLCJwcm9wZXJ0eUlkIjoibGFuZGhhdXMtdHJlc2tlcnNhbmQifQ=="; // String | 
     try {
-      PropertiesGet200Response result = apiInstance.propertiesGet(keyword, pageToken);
+      InlineResponse2002 result = apiInstance.propertiesGet(keyword, pageToken);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#propertiesGet");
@@ -201,14 +201,14 @@ public class Example {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **keyword** | **String**|  | [optional] |
-| **pageToken** | **String**|  | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **keyword** | **String**|  | [optional]
+ **pageToken** | **String**|  | [optional]
 
 ### Return type
 
-[**PropertiesGet200Response**](PropertiesGet200Response.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -222,13 +222,13 @@ public class Example {
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Successful, a list of properties matching the given keyword is returned. |  -  |
-| **400** | We validate all calls to our API in a strict manner using Zod. In case of any validation errors, we send back a 400 response with a list of all validation errors. For more info see https://github.com/colinhacks/zod/blob/master/ERROR_HANDLING.md. |  -  |
-| **403** | Unauthorized, the api key in the \&quot;apiKey\&quot; header field is invalid. |  -  |
+**200** | Successful, a list of properties matching the given keyword is returned. |  -  |
+**400** | We validate all calls to our API in a strict manner using Zod. In case of any validation errors, we send back a 400 response with a list of all validation errors. For more info see https://github.com/colinhacks/zod/blob/master/ERROR_HANDLING.md. |  -  |
+**403** | Unauthorized, the api key in the \&quot;apiKey\&quot; header field is invalid. |  -  |
 
 <a name="propertiesPropertyIdAvailabilityGet"></a>
 # **propertiesPropertyIdAvailabilityGet**
-> PropertiesPropertyIdAvailabilityGet200Response propertiesPropertyIdAvailabilityGet(propertyId, currencyCode)
+> InlineResponse2004 propertiesPropertyIdAvailabilityGet(propertyId, currencyCode)
 
 Get a properties availability
 
@@ -257,9 +257,9 @@ public class Example {
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     String propertyId = "strandresidenz-sylt"; // String | 
-    String currencyCode = "AED"; // String | 
+    String currencyCode = "EUR"; // String | 
     try {
-      PropertiesPropertyIdAvailabilityGet200Response result = apiInstance.propertiesPropertyIdAvailabilityGet(propertyId, currencyCode);
+      InlineResponse2004 result = apiInstance.propertiesPropertyIdAvailabilityGet(propertyId, currencyCode);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#propertiesPropertyIdAvailabilityGet");
@@ -274,14 +274,14 @@ public class Example {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **propertyId** | **String**|  | |
-| **currencyCode** | **String**|  | [enum: AED, ARS, AUD, AZN, BGN, BHD, BRL, CAD, CHF, CLP, CNY, COP, CZK, DKK, EGP, EUR, FJD, GBP, GEL, HKD, HUF, IDR, ILS, INR, JOD, JPY, KRW, KWD, KZT, MDL, MXN, MYR, NAD, NOK, NZD, OMR, PLN, QAR, RON, RUB, SAR, SEK, SGD, THB, TRY, TWD, UAH, USD, XOF, ZAR] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **propertyId** | **String**|  |
+ **currencyCode** | **String**|  |
 
 ### Return type
 
-[**PropertiesPropertyIdAvailabilityGet200Response**](PropertiesPropertyIdAvailabilityGet200Response.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -295,13 +295,13 @@ public class Example {
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Successful, a list of properties matching the given keyword is returned. |  -  |
-| **400** | We validate all calls to our API in a strict manner using Zod. In case of any validation errors, we send back a 400 response with a list of all validation errors. For more info see https://github.com/colinhacks/zod/blob/master/ERROR_HANDLING.md. |  -  |
-| **403** | Unauthorized, the api key in the \&quot;apiKey\&quot; header field is invalid. |  -  |
+**200** | Successful, a list of properties matching the given keyword is returned. |  -  |
+**400** | We validate all calls to our API in a strict manner using Zod. In case of any validation errors, we send back a 400 response with a list of all validation errors. For more info see https://github.com/colinhacks/zod/blob/master/ERROR_HANDLING.md. |  -  |
+**403** | Unauthorized, the api key in the \&quot;apiKey\&quot; header field is invalid. |  -  |
 
 <a name="propertiesPropertyIdGet"></a>
 # **propertiesPropertyIdGet**
-> PropertiesPropertyIdGet200Response propertiesPropertyIdGet(propertyId)
+> InlineResponse2003 propertiesPropertyIdGet(propertyId)
 
 Get a properties details
 
@@ -331,7 +331,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     String propertyId = "strandresidenz-sylt"; // String | 
     try {
-      PropertiesPropertyIdGet200Response result = apiInstance.propertiesPropertyIdGet(propertyId);
+      InlineResponse2003 result = apiInstance.propertiesPropertyIdGet(propertyId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#propertiesPropertyIdGet");
@@ -346,13 +346,13 @@ public class Example {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **propertyId** | **String**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **propertyId** | **String**|  |
 
 ### Return type
 
-[**PropertiesPropertyIdGet200Response**](PropertiesPropertyIdGet200Response.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -366,8 +366,8 @@ public class Example {
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Successful, property found, the whole property object is returned. |  -  |
-| **400** | We validate all calls to our API in a strict manner using Zod. In case of any validation errors, we send back a 400 response with a list of all validation errors. For more info see https://github.com/colinhacks/zod/blob/master/ERROR_HANDLING.md. |  -  |
-| **403** | Unauthorized, the api key in the \&quot;apiKey\&quot; header field is invalid. |  -  |
-| **404** | The requested resource was not found |  -  |
+**200** | Successful, property found, the whole property object is returned. |  -  |
+**400** | We validate all calls to our API in a strict manner using Zod. In case of any validation errors, we send back a 400 response with a list of all validation errors. For more info see https://github.com/colinhacks/zod/blob/master/ERROR_HANDLING.md. |  -  |
+**403** | Unauthorized, the api key in the \&quot;apiKey\&quot; header field is invalid. |  -  |
+**404** | The requested resource was not found |  -  |
 

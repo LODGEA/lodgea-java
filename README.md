@@ -1,8 +1,8 @@
 # lodgea
 
 lodgea-java
-- API version: 1.1.0
-  - Build date: 2023-02-06T17:11:31.294726198Z[Etc/UTC]
+- API version: 1.2.0
+  - Build date: 2023-02-07T12:22:24.387616647Z[Etc/UTC]
 
 LODGEA SDK for java. Check out https://docs.lodgea.io for more information.
 
@@ -13,7 +13,7 @@ LODGEA SDK for java. Check out https://docs.lodgea.io for more information.
 ## Requirements
 
 Building the API client library requires:
-1. Java 1.8+
+1. Java 1.7+
 2. Maven (3.8.3+)/Gradle (7.2+)
 
 ## Installation
@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.lodgea</groupId>
   <artifactId>lodgea</artifactId>
-  <version>1.1.5</version>
+  <version>1.2.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.lodgea:lodgea:1.1.5"
+     implementation "com.lodgea:lodgea:1.2.0"
   }
 ```
 
@@ -70,7 +70,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/lodgea-1.1.5.jar`
+* `target/lodgea-1.2.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -99,9 +99,9 @@ public class Example {
     //ApiKeyAuth.setApiKeyPrefix("Token");
 
     DefaultApi apiInstance = new DefaultApi(defaultClient);
-    AvailabilitySearchPostRequest availabilitySearchPostRequest = new AvailabilitySearchPostRequest(); // AvailabilitySearchPostRequest | 
+    InlineObject1 inlineObject1 = new InlineObject1(); // InlineObject1 | 
     try {
-      AvailabilitySearchPost200Response result = apiInstance.availabilitySearchPost(availabilitySearchPostRequest);
+      InlineResponse2001 result = apiInstance.availabilitySearchPost(inlineObject1);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#availabilitySearchPost");
@@ -130,53 +130,60 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [AvailabilitySearchPost200Response](docs/AvailabilitySearchPost200Response.md)
- - [AvailabilitySearchPostRequest](docs/AvailabilitySearchPostRequest.md)
- - [AvailablePropertiesInner](docs/AvailablePropertiesInner.md)
- - [AvailablePropertiesInner1](docs/AvailablePropertiesInner1.md)
- - [AvailablePropertiesInner1AttractionListInner](docs/AvailablePropertiesInner1AttractionListInner.md)
- - [AvailablePropertiesInner1AttractionListInnerDistance](docs/AvailablePropertiesInner1AttractionListInnerDistance.md)
- - [AvailablePropertiesInner1Geo](docs/AvailablePropertiesInner1Geo.md)
- - [AvailablePropertiesInner1GeoLocation](docs/AvailablePropertiesInner1GeoLocation.md)
- - [AvailablePropertiesInner1LowestPrice](docs/AvailablePropertiesInner1LowestPrice.md)
- - [AvailablePropertiesInner1MediaListInner](docs/AvailablePropertiesInner1MediaListInner.md)
- - [LocationSearchPost200Response](docs/LocationSearchPost200Response.md)
- - [LocationSearchPost400Response](docs/LocationSearchPost400Response.md)
- - [LocationSearchPost400ResponseValidationErrorsInner](docs/LocationSearchPost400ResponseValidationErrorsInner.md)
- - [LocationSearchPostRequest](docs/LocationSearchPostRequest.md)
- - [PropertiesGet200Response](docs/PropertiesGet200Response.md)
- - [PropertiesGet200ResponseListInner](docs/PropertiesGet200ResponseListInner.md)
- - [PropertiesPropertyIdAvailabilityGet200Response](docs/PropertiesPropertyIdAvailabilityGet200Response.md)
- - [PropertiesPropertyIdAvailabilityGet200ResponseAvailabilityListInner](docs/PropertiesPropertyIdAvailabilityGet200ResponseAvailabilityListInner.md)
- - [PropertiesPropertyIdGet200Response](docs/PropertiesPropertyIdGet200Response.md)
- - [PropertiesPropertyIdGet200ResponseProductListInner](docs/PropertiesPropertyIdGet200ResponseProductListInner.md)
- - [PropertiesPropertyIdGet200ResponseProductListInnerPolicyInfo](docs/PropertiesPropertyIdGet200ResponseProductListInnerPolicyInfo.md)
- - [PropertiesPropertyIdGet200ResponseProductListInnerRatePlanListInner](docs/PropertiesPropertyIdGet200ResponseProductListInnerRatePlanListInner.md)
- - [PropertiesPropertyIdGet200ResponseProductListInnerRatePlanListInnerPricingListInner](docs/PropertiesPropertyIdGet200ResponseProductListInnerRatePlanListInnerPricingListInner.md)
- - [PropertiesPropertyIdGet200ResponseProperty](docs/PropertiesPropertyIdGet200ResponseProperty.md)
- - [PropertiesPropertyIdGet200ResponsePropertyAwardListInner](docs/PropertiesPropertyIdGet200ResponsePropertyAwardListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyCancellationGracePeriod](docs/PropertiesPropertyIdGet200ResponsePropertyCancellationGracePeriod.md)
- - [PropertiesPropertyIdGet200ResponsePropertyContactListInner](docs/PropertiesPropertyIdGet200ResponsePropertyContactListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyContactListInnerAddressListInner](docs/PropertiesPropertyIdGet200ResponsePropertyContactListInnerAddressListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyFacilityInfo](docs/PropertiesPropertyIdGet200ResponsePropertyFacilityInfo.md)
- - [PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInner](docs/PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInnerAmenityListInner](docs/PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInnerAmenityListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInnerMediaListInner](docs/PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInnerMediaListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInnerMessageListInner](docs/PropertiesPropertyIdGet200ResponsePropertyFacilityInfoGuestRoomListInnerMessageListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyGuestInfo](docs/PropertiesPropertyIdGet200ResponsePropertyGuestInfo.md)
- - [PropertiesPropertyIdGet200ResponsePropertyPolicyListInner](docs/PropertiesPropertyIdGet200ResponsePropertyPolicyListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerCancellationPolicyListInner](docs/PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerCancellationPolicyListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerFeePolicyListInner](docs/PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerFeePolicyListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerGuaranteePolicy](docs/PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerGuaranteePolicy.md)
- - [PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerPetsPolicy](docs/PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerPetsPolicy.md)
- - [PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerTaxPolicyListInner](docs/PropertiesPropertyIdGet200ResponsePropertyPolicyListInnerTaxPolicyListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyPropertyInfo](docs/PropertiesPropertyIdGet200ResponsePropertyPropertyInfo.md)
- - [PropertiesPropertyIdGet200ResponsePropertyPropertyInfoAcceptedPaymentListInner](docs/PropertiesPropertyIdGet200ResponsePropertyPropertyInfoAcceptedPaymentListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyPropertyInfoMessageListInner](docs/PropertiesPropertyIdGet200ResponsePropertyPropertyInfoMessageListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyRecordCreated](docs/PropertiesPropertyIdGet200ResponsePropertyRecordCreated.md)
- - [PropertiesPropertyIdGet200ResponsePropertyRecordModified](docs/PropertiesPropertyIdGet200ResponsePropertyRecordModified.md)
- - [PropertiesPropertyIdGet200ResponsePropertyServiceListInner](docs/PropertiesPropertyIdGet200ResponsePropertyServiceListInner.md)
- - [PropertiesPropertyIdGet200ResponsePropertyServiceListInnerOperationTimeListInner](docs/PropertiesPropertyIdGet200ResponsePropertyServiceListInnerOperationTimeListInner.md)
+ - [InlineObject](docs/InlineObject.md)
+ - [InlineObject1](docs/InlineObject1.md)
+ - [InlineResponse200](docs/InlineResponse200.md)
+ - [InlineResponse2001](docs/InlineResponse2001.md)
+ - [InlineResponse2001AttractionList](docs/InlineResponse2001AttractionList.md)
+ - [InlineResponse2001Distance](docs/InlineResponse2001Distance.md)
+ - [InlineResponse2001Geo](docs/InlineResponse2001Geo.md)
+ - [InlineResponse2001GeoLocation](docs/InlineResponse2001GeoLocation.md)
+ - [InlineResponse2001List](docs/InlineResponse2001List.md)
+ - [InlineResponse2001LowestPrice](docs/InlineResponse2001LowestPrice.md)
+ - [InlineResponse2001MediaList](docs/InlineResponse2001MediaList.md)
+ - [InlineResponse2002](docs/InlineResponse2002.md)
+ - [InlineResponse2002List](docs/InlineResponse2002List.md)
+ - [InlineResponse2003](docs/InlineResponse2003.md)
+ - [InlineResponse2003PolicyInfo](docs/InlineResponse2003PolicyInfo.md)
+ - [InlineResponse2003PolicyInfoFeePolicyList](docs/InlineResponse2003PolicyInfoFeePolicyList.md)
+ - [InlineResponse2003PolicyInfoTaxPolicyList](docs/InlineResponse2003PolicyInfoTaxPolicyList.md)
+ - [InlineResponse2003PricingList](docs/InlineResponse2003PricingList.md)
+ - [InlineResponse2003ProductList](docs/InlineResponse2003ProductList.md)
+ - [InlineResponse2003Property](docs/InlineResponse2003Property.md)
+ - [InlineResponse2003PropertyAddressList](docs/InlineResponse2003PropertyAddressList.md)
+ - [InlineResponse2003PropertyAwardList](docs/InlineResponse2003PropertyAwardList.md)
+ - [InlineResponse2003PropertyCancellationGracePeriod](docs/InlineResponse2003PropertyCancellationGracePeriod.md)
+ - [InlineResponse2003PropertyCancellationPolicyList](docs/InlineResponse2003PropertyCancellationPolicyList.md)
+ - [InlineResponse2003PropertyContactList](docs/InlineResponse2003PropertyContactList.md)
+ - [InlineResponse2003PropertyFacilityInfo](docs/InlineResponse2003PropertyFacilityInfo.md)
+ - [InlineResponse2003PropertyFacilityInfoAmenityList](docs/InlineResponse2003PropertyFacilityInfoAmenityList.md)
+ - [InlineResponse2003PropertyFacilityInfoGuestRoomList](docs/InlineResponse2003PropertyFacilityInfoGuestRoomList.md)
+ - [InlineResponse2003PropertyFacilityInfoMediaList](docs/InlineResponse2003PropertyFacilityInfoMediaList.md)
+ - [InlineResponse2003PropertyFacilityInfoMessageList](docs/InlineResponse2003PropertyFacilityInfoMessageList.md)
+ - [InlineResponse2003PropertyFeePolicyList](docs/InlineResponse2003PropertyFeePolicyList.md)
+ - [InlineResponse2003PropertyGuaranteePolicy](docs/InlineResponse2003PropertyGuaranteePolicy.md)
+ - [InlineResponse2003PropertyGuestInfo](docs/InlineResponse2003PropertyGuestInfo.md)
+ - [InlineResponse2003PropertyMediaList](docs/InlineResponse2003PropertyMediaList.md)
+ - [InlineResponse2003PropertyOperationTimeList](docs/InlineResponse2003PropertyOperationTimeList.md)
+ - [InlineResponse2003PropertyPetsPolicy](docs/InlineResponse2003PropertyPetsPolicy.md)
+ - [InlineResponse2003PropertyPolicyList](docs/InlineResponse2003PropertyPolicyList.md)
+ - [InlineResponse2003PropertyPropertyInfo](docs/InlineResponse2003PropertyPropertyInfo.md)
+ - [InlineResponse2003PropertyPropertyInfoAcceptedPaymentList](docs/InlineResponse2003PropertyPropertyInfoAcceptedPaymentList.md)
+ - [InlineResponse2003PropertyPropertyInfoMessageList](docs/InlineResponse2003PropertyPropertyInfoMessageList.md)
+ - [InlineResponse2003PropertyRecordCreated](docs/InlineResponse2003PropertyRecordCreated.md)
+ - [InlineResponse2003PropertyRecordModified](docs/InlineResponse2003PropertyRecordModified.md)
+ - [InlineResponse2003PropertyServiceList](docs/InlineResponse2003PropertyServiceList.md)
+ - [InlineResponse2003PropertyTaxPolicyList](docs/InlineResponse2003PropertyTaxPolicyList.md)
+ - [InlineResponse2003RatePlanList](docs/InlineResponse2003RatePlanList.md)
+ - [InlineResponse2004](docs/InlineResponse2004.md)
+ - [InlineResponse2004AvailabilityList](docs/InlineResponse2004AvailabilityList.md)
+ - [InlineResponse2004PricingList](docs/InlineResponse2004PricingList.md)
+ - [InlineResponse2004RatePlanList](docs/InlineResponse2004RatePlanList.md)
+ - [InlineResponse200List](docs/InlineResponse200List.md)
+ - [InlineResponse400](docs/InlineResponse400.md)
+ - [InlineResponse4001](docs/InlineResponse4001.md)
+ - [InlineResponse4001ValidationErrors](docs/InlineResponse4001ValidationErrors.md)
+ - [InlineResponse400ValidationErrors](docs/InlineResponse400ValidationErrors.md)
 
 
 ## Documentation for Authorization
